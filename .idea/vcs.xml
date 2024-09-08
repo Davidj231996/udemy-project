@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/udemy-client" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/udemy-games" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/udemy-guesses" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/udemy-project/udemy-stats" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/udemy-query" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/udemy-stats" vcs="Git" />
   </component>

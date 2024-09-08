@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: games-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: games
+    template:
+      metadata:
+        labels:
+          app: games
+      spec:
+        containers:
+          - name: games
+            image: udemy-games
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: games-service
+spec:
+  selector:
+    app: games
+  ports:
+    - name: games
+      protocol: TCP
+      port: 8000
+      targetPort: 8000

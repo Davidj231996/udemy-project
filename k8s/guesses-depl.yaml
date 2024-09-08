@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guesses-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: guesses
+    template:
+      metadata:
+        labels:
+          app: guesses
+      spec:
+        containers:
+          - name: guesses
+            image: udemy-guesses
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: guesses-service
+spec:
+  selector:
+    app: guesses
+  ports:
+    - name: guesses
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
